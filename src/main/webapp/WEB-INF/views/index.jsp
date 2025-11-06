@@ -9,7 +9,8 @@
     <a href="<%= request.getContextPath() %>/join">회원가입</a>
 </nav>
 <section>
-   <p>환영합니다!</p>
+    <p>환영합니다!</p>
+    <img width="320" src="<%= request.getContextPath() %>/images/cat.jpg">
 </section>
 </body>
 </html>

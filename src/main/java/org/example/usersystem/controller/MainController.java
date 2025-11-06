@@ -8,7 +8,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/")
+//@WebServlet("/") // "/" <- default 서블릿 덮어씌우기 <- 파일 접근을 위한 default 서블릿
+@WebServlet("") // 디폴트 서블릿 덮어 씌우기 방지
 public class MainController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
