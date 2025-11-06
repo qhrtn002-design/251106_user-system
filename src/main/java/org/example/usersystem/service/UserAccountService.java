@@ -9,4 +9,14 @@ public class UserAccountService {
     public void createUser(String username, String password) {
         accountRepository.createUser(new UserAccount(username, password));
     }
+
+    public boolean login(String username, String password) {
+        try {
+            UserAccount account = accountRepository.findByUsername(username);
+            return account.password().equals(password);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
